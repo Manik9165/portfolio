@@ -52,15 +52,30 @@
         }
       }
 
-      .brief_description_container_image {
-        background-color: #ffffff;
-        height: 80px;
-        rotate: 90deg;
+      .brief_description_container_icons {
+        display: flex;
+        gap: 20px;
+        align-items: end;
+        flex-direction: column;
+
+        .MuiButtonBase-root {
+          padding: 0;
+
+          .MuiSvgIcon-root {
+            font-size: 50px;
+            color: #ffffff;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+              transform: scale(1.2); // Zoom effect on hover
+            }
+          }
+        }
       }
     }
   }
 
-  .work_description_parent_container {
+  .skills_description_parent_container {
     width: 90%;
     margin: 0 auto;
 
@@ -69,7 +84,7 @@
         sans-serif;
     }
 
-    .work_description_container_content {
+    .skills_description_container_content {
       display: flex;
 
       .description_title {

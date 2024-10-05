@@ -1,8 +1,31 @@
-import { Grid, Typography } from "@mui/material";
-
+import { Divider, Grid, IconButton, Typography } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import React from "react";
+import { Link } from "react-router-dom";
+
+interface ButtonProps {
+  addressTo: string;
+  icon?: JSX.Element;
+}
 
 const Description = () => {
+  const buttons: ButtonProps[] = [
+    {
+      addressTo: "https://www.linkedin.com/in/manik9165/",
+      icon: <LinkedInIcon />,
+    },
+    {
+      addressTo: "https://github.com/Manik9165",
+      icon: <GitHubIcon />,
+    },
+    {
+      addressTo: "mailto:manikkapoor9165@gmail.com",
+      icon: <EmailOutlinedIcon />,
+    },
+  ];
+
   return (
     <Grid className="brief_description_parent_container">
       <Grid container className="brief_description_child_container">
@@ -18,7 +41,12 @@ const Description = () => {
             experience.
           </Typography>
         </Grid>
-        <Grid item xs={4} className="brief_description_container_image">
+        <Grid item xs={4} className="brief_description_container_icons">
+          {buttons.map((btn) => (
+            <IconButton>
+              <Link to={btn.addressTo}>{btn.icon}</Link>
+            </IconButton>
+          ))}
         </Grid>
       </Grid>
     </Grid>
