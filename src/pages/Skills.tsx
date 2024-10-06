@@ -47,7 +47,6 @@ const Skills = () => {
   // Options to customize the graph appearance
   const options = {
     responsive: true,
-    plugins: {},
     scales: {
       x: {
         ticks: {
