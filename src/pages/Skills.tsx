@@ -74,12 +74,12 @@ const Skills = () => {
 
   return (
     <Grid container className="skills_description_parent_container">
-      <Grid item xs={12} className="skills_description_container_content">
+      <Grid item xs={12} className="skills_description_container_content portfolio_headings">
         <Typography variant="h2" className="description_title">
           Skills
         </Typography>
       </Grid>
-      <Grid style={{ width: "60%", margin: "0 auto" }}>
+      <Grid style={{ width: "70%", margin: "0 auto" }}>
         <Bar data={data} options={options} />
       </Grid>
     </Grid>

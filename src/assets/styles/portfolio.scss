@@ -3,6 +3,27 @@
   height: 100%;
   position: relative;
 
+  .portfolio_headings {
+    .description_title {
+      font-weight: 600;
+      font-size: 32px;
+      position: relative;
+      display: inline-block;
+      color: #020f20;
+    }
+
+    .description_title::after {
+      content: "";
+      width: 100%;
+      height: 15px; /* Adjust height to fit the wave size */
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 10, 50 5 T 100 5" fill="none" stroke="black" stroke-width="2"/></svg>');
+      position: absolute;
+      bottom: -15px; /* Adjust to position the wave correctly */
+      left: 0;
+      color: #020f20;
+    }
+  }
+
   .brief_description_parent_container {
     background-color: #020f20;
     color: white;
@@ -78,7 +99,8 @@
   .skills_description_parent_container {
     width: 90%;
     margin: 0 auto;
-    gap: 30px;
+    gap: 40px;
+    margin-bottom: 35px;
 
     .MuiTypography-root {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -87,24 +109,77 @@
 
     .skills_description_container_content {
       display: flex;
+    }
+  }
 
-      .description_title {
-        font-weight: 600;
-        font-size: 32px;
-        position: relative;
-        display: inline-block;
-        color: #020f20;
+  .work_experience_parent_container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+
+    .MuiTypography-root {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+
+    .work_experience_child_container {
+      background: #ffffff;
+      width: 70%;
+      min-height: 550px;
+      border-radius: 40px;
+      padding: 25px;
+
+      .work_exp_left_div {
+        display: flex;
+
+        .MuiCard-root {
+          background: #ffffff;
+          display: flex;
+          align-items: center;
+          width: 75%;
+          border-radius: 20px;
+          justify-content: center;
+          height: 20%;
+
+          .MuiCardContent-root {
+            padding: 0;
+
+            .MuiTypography-root {
+              font-size: 32px;
+              font-weight: 600;
+              color: #020f20;
+            }
+          }
+        }
       }
 
-      .description_title::after {
-        content: "";
-        width: 100%;
-        height: 15px; /* Adjust height to fit the wave size */
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 10, 50 5 T 100 5" fill="none" stroke="black" stroke-width="2"/></svg>');
-        position: absolute;
-        bottom: -15px; /* Adjust to position the wave correctly */
-        left: 0;
-        color: #020f20;
+      .work_exp_right_div {
+        .MuiCard-root {
+          height: 100%;
+          border-radius: 25px;
+          background-color: #ffffff;
+
+          .MuiCardContent-root {
+            padding: 0;
+
+            .MuiTypography-root {
+              display: flex;
+              gap: 20px;
+              font-size: 32px;
+              font-weight: 600;
+              padding: 20px 0px 10px 20px;
+              color: #020f20;
+              text-decoration: underline;
+              text-underline-offset: 15px;
+            }
+
+            .company_logo img {
+              width: 60px;
+              object-fit: cover;
+            }
+          }
+        }
       }
     }
   }
