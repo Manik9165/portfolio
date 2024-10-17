@@ -42,9 +42,11 @@ const Description = () => {
           </Typography>
         </Grid>
         <Grid item xs={4} className="brief_description_container_icons">
-          {buttons.map((btn) => (
-            <IconButton>
-              <Link to={btn.addressTo}>{btn.icon}</Link>
+          {buttons.map((btn, index) => (
+            <IconButton key={index}>
+              <Link to={btn.addressTo}>
+                {btn.icon}
+              </Link>
             </IconButton>
           ))}
         </Grid>

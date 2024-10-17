@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 import Description from "./Description";
 import Skills from "./Skills";
 import WorkExp from "./WorkExp";
+import Projects from "./Projects";
 
 const Portfolio = () => {
   return (
@@ -10,6 +11,7 @@ const Portfolio = () => {
       <Description />
       <Skills />
       <WorkExp />
+      <Projects />
     </Grid>
   );
 };
