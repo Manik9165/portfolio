@@ -4,6 +4,7 @@ import Description from "./Description";
 import Skills from "./Skills";
 import WorkExp from "./WorkExp";
 import Projects from "./Projects";
+import FooterDesc from "./FooterDesc";
 
 const Portfolio = () => {
   return (
@@ -12,6 +13,7 @@ const Portfolio = () => {
       <Skills />
       <WorkExp />
       <Projects />
+      <FooterDesc />
     </Grid>
   );
 };

@@ -33,7 +33,7 @@ const Projects = () => {
       name: "Meet-up",
       image: "",
       description:
-        "Developed a Google meet clone using Next.js, Node.js and web-RTC. Gave a good understanding of how web-sockets work.",
+        "Developed a Google meet clone using Next.js, Node.js and web-RTC. This project gave a good understanding of how web-sockets work.",
       previewLink: "#",
     },
     {
@@ -41,7 +41,7 @@ const Projects = () => {
       name: "Post-creator",
       image: "",
       description:
-        "Created a basic post creation applications using Node.js, Express and Mongo. Basic but a good learning experience.",
+        "Created a basic post creation application using Node.js, Express and Mongo. Basic but a good learning experience.",
       previewLink: "#",
     },
   ];
