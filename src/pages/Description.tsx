@@ -29,7 +29,13 @@ const Description = () => {
   return (
     <Grid className="brief_description_parent_container">
       <Grid container className="brief_description_child_container">
-        <Grid item xs={8} className="brief_description_container_content">
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={8}
+          className="brief_description_container_content"
+        >
           <Typography variant="h2" className="description_title">
             Hey, I'm Manik.
           </Typography>
@@ -41,12 +47,16 @@ const Description = () => {
             experience.
           </Typography>
         </Grid>
-        <Grid item xs={4} className="brief_description_container_icons">
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={4}
+          className="brief_description_container_icons"
+        >
           {buttons.map((btn, index) => (
             <IconButton key={index}>
-              <Link to={btn.addressTo}>
-                {btn.icon}
-              </Link>
+              <Link to={btn.addressTo}>{btn.icon}</Link>
             </IconButton>
           ))}
         </Grid>

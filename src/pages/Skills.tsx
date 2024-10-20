@@ -79,7 +79,7 @@ const Skills = () => {
           Skills
         </Typography>
       </Grid>
-      <Grid style={{ width: "70%", margin: "0 auto" }}>
+      <Grid className="skills_bar_chart">
         <Bar data={data} options={options} />
       </Grid>
     </Grid>
